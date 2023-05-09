@@ -18,10 +18,6 @@ const useMousePosition = () => {
     };
   }, []);
 
-  useEffect(() => {
-    dispatch(fetchRefreshToken());
-  }, []);
-
   return null;
 };
 export default useMousePosition;
