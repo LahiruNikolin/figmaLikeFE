@@ -36,6 +36,8 @@ function CreateUser() {
     }
   };
 
+  const handleBackToLogin = () => router.push("/login");
+
   return (
     <div className={styles.mainContainer}>
       <h2 className={styles.headerTxt}>Create User</h2>
@@ -70,9 +72,14 @@ function CreateUser() {
             required
           />
         </div>
-        <button className={styles.btn} type="submit">
-          Create User
-        </button>
+        <div className={styles.loginBtnContainer}>
+          <button className={styles.btnAlternate} onClick={handleBackToLogin}>
+            Back to login
+          </button>
+          <button className={styles.btn} type="submit">
+            Create User
+          </button>
+        </div>
       </form>
     </div>
   );
